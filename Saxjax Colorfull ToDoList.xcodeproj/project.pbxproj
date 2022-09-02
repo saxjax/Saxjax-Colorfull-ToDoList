@@ -17,6 +17,22 @@
 		E46506C228C2480D004C8344 /* Saxjax_Colorfull_ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506C128C2480D004C8344 /* Saxjax_Colorfull_ToDoListTests.swift */; };
 		E46506CC28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506CB28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITests.swift */; };
 		E46506CE28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506CD28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift */; };
+		E46506DF28C24989004C8344 /* MakeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506DE28C24989004C8344 /* MakeColor.swift */; };
+		E46506E028C24989004C8344 /* MakeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506DE28C24989004C8344 /* MakeColor.swift */; };
+		E46506E128C24989004C8344 /* MakeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506DE28C24989004C8344 /* MakeColor.swift */; };
+		E46506E428C249A1004C8344 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E228C249A1004C8344 /* CategoryTableViewController.swift */; };
+		E46506E528C249A1004C8344 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E228C249A1004C8344 /* CategoryTableViewController.swift */; };
+		E46506E628C249A1004C8344 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E228C249A1004C8344 /* CategoryTableViewController.swift */; };
+		E46506E728C249A1004C8344 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E328C249A1004C8344 /* ToDoListViewController.swift */; };
+		E46506E828C249A1004C8344 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E328C249A1004C8344 /* ToDoListViewController.swift */; };
+		E46506E928C249A1004C8344 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506E328C249A1004C8344 /* ToDoListViewController.swift */; };
+		E46506ED28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E46506EB28C24A4B004C8344 /* DataModel.xcdatamodeld */; };
+		E46506EE28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E46506EB28C24A4B004C8344 /* DataModel.xcdatamodeld */; };
+		E46506EF28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E46506EB28C24A4B004C8344 /* DataModel.xcdatamodeld */; };
+		E46506F128C24C29004C8344 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506F028C24C29004C8344 /* Constants.swift */; };
+		E46506F228C24C29004C8344 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506F028C24C29004C8344 /* Constants.swift */; };
+		E46506F328C24C29004C8344 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506F028C24C29004C8344 /* Constants.swift */; };
+		E46506F628C24C83004C8344 /* MakeColorUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46506F528C24C83004C8344 /* MakeColorUnitTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +67,13 @@
 		E46506C728C2480E004C8344 /* Saxjax Colorfull ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saxjax Colorfull ToDoListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46506CB28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saxjax_Colorfull_ToDoListUITests.swift; sourceTree = "<group>"; };
 		E46506CD28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E46506DE28C24989004C8344 /* MakeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeColor.swift; sourceTree = "<group>"; };
+		E46506E228C249A1004C8344 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		E46506E328C249A1004C8344 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		E46506EC28C24A4B004C8344 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		E46506F028C24C29004C8344 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E46506F428C24C4E004C8344 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		E46506F528C24C83004C8344 /* MakeColorUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeColorUnitTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +124,18 @@
 		E46506A628C2480B004C8344 /* Saxjax Colorfull ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				E46506F428C24C4E004C8344 /* MyPlayground.playground */,
+				E46506DD28C24989004C8344 /* Helpers */,
+				E46506EA28C24A4B004C8344 /* DataModel */,
+				E46506DA28C24894004C8344 /* Model */,
+				E46506DB28C248B4004C8344 /* View */,
+				E46506DC28C248C7004C8344 /* Controller */,
 				E46506A728C2480C004C8344 /* AppDelegate.swift */,
 				E46506A928C2480C004C8344 /* SceneDelegate.swift */,
-				E46506AB28C2480C004C8344 /* ViewController.swift */,
-				E46506AD28C2480C004C8344 /* Main.storyboard */,
 				E46506B328C2480D004C8344 /* Assets.xcassets */,
 				E46506B528C2480D004C8344 /* LaunchScreen.storyboard */,
 				E46506B828C2480D004C8344 /* Info.plist */,
-				E46506B028C2480C004C8344 /* Saxjax_Colorfull_ToDoList.xcdatamodeld */,
+				E46506F028C24C29004C8344 /* Constants.swift */,
 			);
 			path = "Saxjax Colorfull ToDoList";
 			sourceTree = "<group>";
@@ -117,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E46506C128C2480D004C8344 /* Saxjax_Colorfull_ToDoListTests.swift */,
+				E46506F528C24C83004C8344 /* MakeColorUnitTest.swift */,
 			);
 			path = "Saxjax Colorfull ToDoListTests";
 			sourceTree = "<group>";
@@ -128,6 +156,48 @@
 				E46506CD28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift */,
 			);
 			path = "Saxjax Colorfull ToDoListUITests";
+			sourceTree = "<group>";
+		};
+		E46506DA28C24894004C8344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E46506B028C2480C004C8344 /* Saxjax_Colorfull_ToDoList.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E46506DB28C248B4004C8344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E46506AD28C2480C004C8344 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E46506DC28C248C7004C8344 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E46506E228C249A1004C8344 /* CategoryTableViewController.swift */,
+				E46506E328C249A1004C8344 /* ToDoListViewController.swift */,
+				E46506AB28C2480C004C8344 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E46506DD28C24989004C8344 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E46506DE28C24989004C8344 /* MakeColor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E46506EA28C24A4B004C8344 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E46506EB28C24A4B004C8344 /* DataModel.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46506DF28C24989004C8344 /* MakeColor.swift in Sources */,
+				E46506ED28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */,
 				E46506AC28C2480C004C8344 /* ViewController.swift in Sources */,
 				E46506A828C2480C004C8344 /* AppDelegate.swift in Sources */,
 				E46506AA28C2480C004C8344 /* SceneDelegate.swift in Sources */,
 				E46506B228C2480C004C8344 /* Saxjax_Colorfull_ToDoList.xcdatamodeld in Sources */,
+				E46506E728C249A1004C8344 /* ToDoListViewController.swift in Sources */,
+				E46506E428C249A1004C8344 /* CategoryTableViewController.swift in Sources */,
+				E46506F128C24C29004C8344 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +347,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46506E828C249A1004C8344 /* ToDoListViewController.swift in Sources */,
+				E46506EE28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */,
 				E46506C228C2480D004C8344 /* Saxjax_Colorfull_ToDoListTests.swift in Sources */,
+				E46506E028C24989004C8344 /* MakeColor.swift in Sources */,
+				E46506F628C24C83004C8344 /* MakeColorUnitTest.swift in Sources */,
+				E46506E528C249A1004C8344 /* CategoryTableViewController.swift in Sources */,
+				E46506F228C24C29004C8344 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +362,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46506CE28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITestsLaunchTests.swift in Sources */,
+				E46506E128C24989004C8344 /* MakeColor.swift in Sources */,
 				E46506CC28C2480E004C8344 /* Saxjax_Colorfull_ToDoListUITests.swift in Sources */,
+				E46506EF28C24A4B004C8344 /* DataModel.xcdatamodeld in Sources */,
+				E46506F328C24C29004C8344 /* Constants.swift in Sources */,
+				E46506E928C249A1004C8344 /* ToDoListViewController.swift in Sources */,
+				E46506E628C249A1004C8344 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +533,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +562,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -615,6 +703,16 @@
 			);
 			currentVersion = E46506B128C2480C004C8344 /* Saxjax_Colorfull_ToDoList.xcdatamodel */;
 			path = Saxjax_Colorfull_ToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E46506EB28C24A4B004C8344 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E46506EC28C24A4B004C8344 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = E46506EC28C24A4B004C8344 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

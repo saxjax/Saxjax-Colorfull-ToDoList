@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" defaultDateTimeInterval="683638140" usesScalarValueType="NO"/>
+        <attribute name="isChecked" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoCategory" inverseName="items" inverseEntity="ToDoCategory"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="ToDoCategory" representedClassName=".ToDoCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String" customClassName="[Double]"/>
+        <attribute name="isChecked" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Item" inverseName="parentCategory" inverseEntity="Item"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-152.4265747070312" positionY="158.9263916015625" width="128" height="103"/>
+        <element name="ToDoCategory" positionX="505.88037109375" positionY="223.008544921875" width="128" height="103"/>
+    </elements>
+</model>
