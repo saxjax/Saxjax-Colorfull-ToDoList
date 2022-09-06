@@ -79,7 +79,7 @@ class CategoryTableViewController: UITableViewController {
       cell.textLabel?.tintColor = contrast
       cell.textLabel?.textColor = contrast
 
-//      colorNavigationBar(backgroundcolor: color, contrastColor: contrast)
+      //      colorNavigationBar(backgroundcolor: color, contrastColor: contrast)
     }
 
     cell.textLabel?.text = category.name
@@ -120,16 +120,64 @@ class CategoryTableViewController: UITableViewController {
 
   }
 
+  //MARK: -Enable Swipes
+
+  override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _ , indexPath in
+      self.delete(at: indexPath)
+    }
+
+    let edit = UITableViewRowAction(style: .default, title: "Edit") { _ , indexPath in
+
+      var textField = UITextField()
+
+      let alert = UIAlertController(title: "Edit category", message: "", preferredStyle: .alert)
+      alert.addTextField{ alertTextField in
+        alertTextField.placeholder = self.categories[indexPath.row].name
+        textField = alertTextField
+      }
+
+      let saveAction = UIAlertAction(title: "Save", style: .default) { action in
+
+        let newCategory = self.categories[indexPath.row]
+        newCategory.name = textField.text!
+        newCategory.isChecked = false
+
+        self.saveItems()
+        self.tableView.reloadData()
+      }
+
+      let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+      alert.addAction(cancelAction)
+      alert.addAction(saveAction)
+
+
+      self.present(alert, animated: true,completion: nil)
+
+    }
+    edit.backgroundColor = UIColor.darkGray
+
+    let changeColor = UITableViewRowAction(style: .default, title: "New color") { _, indexPath in
+      let newCategory = self.categories[indexPath.row]
+      newCategory.color = MakeColor.randomHex()
+
+      self.saveItems()
+      self.tableView.reloadData()
+    }
+    changeColor.backgroundColor = UIColor.systemGreen
+
+    return [delete,changeColor,edit]
+  }
 
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == .delete {
-      delete(at: indexPath)
-      //      context.delete(categories[indexPath.row])
-      //      categories.remove(at: indexPath.row)
-      //      saveItems()
-    }
-    else if editingStyle == .insert {
-
+    switch editingStyle {
+      case .delete:
+        delete(at: indexPath)
+      case .insert:
+        print("Insert pressed")
+      default:
+        print("neither insert or delete is pressed")
     }
   }
 
@@ -208,6 +256,41 @@ class CategoryTableViewController: UITableViewController {
     categories.remove(at: indexPath.row)
     saveItems()
   }
+
+  //MARK: -Custom popups
+
+  private func editAction(at indexPath:IndexPath,with newValue:String)->[UIAlertAction]{
+    let action = UIAlertAction(title: "Save", style: .default) { action in
+
+      let newCategory = self.categories[indexPath.row]
+      newCategory.name = newValue
+      newCategory.isChecked = false
+
+      self.saveItems()
+      self.tableView.reloadData()
+    }
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+
+    return [cancel,action]
+  }
+
+  //  private func createPopUp(named title:String, placeholder:String? = nil, message:String? = nil,  textField:inout UITextField, with actions:[UIAlertAction])->UIAlertController{
+  //
+  //    let alert = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
+  //    alert.addTextField{ alertTextField in
+  //      alertTextField.placeholder = placeholder
+  //      alertTextField.text = message
+  //      textField = alertTextField
+  //    }
+  //    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+  //    alert.addAction(cancel)
+  //    for action in actions {
+  //      alert.addAction(action)
+  //    }
+  //
+  ////    self.present(alert, animated: true,completion: nil)
+  //return alert
+  //  }
 
 
   //MARK: -Coloring

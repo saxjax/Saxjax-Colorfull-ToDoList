@@ -142,6 +142,49 @@ class ToDoListViewController: UITableViewController {
 
   }
 
+
+
+
+  override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _ , indexPath in
+      self.deleteItem(at: indexPath)
+    }
+
+    let edit = UITableViewRowAction(style: .default, title: "Edit") { _ , indexPath in
+
+      var textField = UITextField()
+
+
+      let alert = UIAlertController(title: "Edit item", message: "", preferredStyle: .alert)
+      alert.addTextField{ alertTextField in
+        alertTextField.text = self.itemArray[indexPath.row].title
+        textField = alertTextField
+      }
+
+      let saveAction = UIAlertAction(title: "Save", style: .default) { action in
+
+        let newItem = self.itemArray[indexPath.row]
+        newItem.title = textField.text!
+        newItem.isChecked = false
+
+        self.saveItems()
+        self.tableView.reloadData()
+      }
+
+      let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+      alert.addAction(cancelAction)
+      alert.addAction(saveAction)
+
+
+      self.present(alert, animated: true,completion: nil)
+
+    }
+    edit.backgroundColor = UIColor.darkGray
+
+    return [delete,edit]
+  }
+
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
       deleteItem(at: indexPath)
