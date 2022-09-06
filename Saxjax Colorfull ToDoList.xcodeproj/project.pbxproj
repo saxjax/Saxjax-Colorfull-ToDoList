@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4026B2828C79D0900E31F8A /* simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png in Resources */ = {isa = PBXBuildFile; fileRef = E4026B2528C79D0900E31F8A /* simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png */; };
+		E4026B2928C79D0900E31F8A /* Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png in Resources */ = {isa = PBXBuildFile; fileRef = E4026B2628C79D0900E31F8A /* Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png */; };
+		E4026B2A28C79D0900E31F8A /* simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png in Resources */ = {isa = PBXBuildFile; fileRef = E4026B2728C79D0900E31F8A /* simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png */; };
 		E407828228C61EB6009D0856 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E407826428C61EB6009D0856 /* Icon-29.png */; };
 		E407828328C61EB6009D0856 /* Icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = E407826528C61EB6009D0856 /* Icon-16.png */; };
 		E407828428C61EB6009D0856 /* Icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = E407826628C61EB6009D0856 /* Icon-256.png */; };
@@ -83,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4026B2528C79D0900E31F8A /* simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png"; sourceTree = "<group>"; };
+		E4026B2628C79D0900E31F8A /* Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png"; sourceTree = "<group>"; };
+		E4026B2728C79D0900E31F8A /* simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png"; sourceTree = "<group>"; };
 		E407826428C61EB6009D0856 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		E407826528C61EB6009D0856 /* Icon-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-16.png"; sourceTree = "<group>"; };
 		E407826628C61EB6009D0856 /* Icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-256.png"; sourceTree = "<group>"; };
@@ -194,6 +200,9 @@
 				E407826628C61EB6009D0856 /* Icon-256.png */,
 				E407828028C61EB6009D0856 /* Icon-512.png */,
 				E407826C28C61EB6009D0856 /* Icon-Original-1024.png */,
+				E4026B2628C79D0900E31F8A /* Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png */,
+				E4026B2728C79D0900E31F8A /* simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png */,
+				E4026B2528C79D0900E31F8A /* simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png */,
 			);
 			path = Artwork;
 			sourceTree = "<group>";
@@ -414,12 +423,15 @@
 				E407829628C61EB6009D0856 /* Icon-40.png in Resources */,
 				E407828A28C61EB6009D0856 /* Icon-Original-1024.png in Resources */,
 				E407828928C61EB6009D0856 /* Icon-48.png in Resources */,
+				E4026B2A28C79D0900E31F8A /* simulator_screenshot_6BB702DB-4464-4E5E-BFDF-7DF75273110E.png in Resources */,
+				E4026B2928C79D0900E31F8A /* Simulator Screen Shot - iPhone 13 Pro Max - 2022-09-05 at 15.39.24.png in Resources */,
 				E46506AF28C2480C004C8344 /* Main.storyboard in Resources */,
 				E407829E28C61EB6009D0856 /* Icon-512.png in Resources */,
 				E407828628C61EB6009D0856 /* Icon-88.png in Resources */,
 				E407828228C61EB6009D0856 /* Icon-29.png in Resources */,
 				E407829728C61EB6009D0856 /* Icon-87.png in Resources */,
 				E407829128C61EB6009D0856 /* Icon-196.png in Resources */,
+				E4026B2828C79D0900E31F8A /* simulator_screenshot_15D19557-09D4-4359-940E-2058E3EC79F8.png in Resources */,
 				E407828428C61EB6009D0856 /* Icon-256.png in Resources */,
 				E407828328C61EB6009D0856 /* Icon-16.png in Resources */,
 				E407828F28C61EB6009D0856 /* Icon-58.png in Resources */,
