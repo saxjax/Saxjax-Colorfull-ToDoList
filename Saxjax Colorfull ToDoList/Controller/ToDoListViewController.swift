@@ -143,15 +143,13 @@ class ToDoListViewController: UITableViewController {
   }
 
 
-
-
-  override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _ , indexPath in
+//  MARK: Swipe actions
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, boolvalue in
       self.deleteItem(at: indexPath)
     }
 
-    let edit = UITableViewRowAction(style: .default, title: "Edit") { _ , indexPath in
-
+    let edit = UIContextualAction(style: .normal, title: "Edit") { _, view, boolValue in
       var textField = UITextField()
 
 
@@ -178,22 +176,49 @@ class ToDoListViewController: UITableViewController {
 
 
       self.present(alert, animated: true,completion: nil)
-
     }
-    edit.backgroundColor = UIColor.darkGray
 
-    return [delete,edit]
+    let swipeActions = UISwipeActionsConfiguration(actions: [delete,edit])
+
+    return swipeActions
+
+
   }
 
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == .delete {
-      deleteItem(at: indexPath)
-    }
-    else if editingStyle == .insert {
+  override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let edit = UIContextualAction(style: .normal, title: "Edit") { _, view, boolValue in
+      var textField = UITextField()
 
+
+      let alert = UIAlertController(title: "Edit item", message: "", preferredStyle: .alert)
+      alert.addTextField{ alertTextField in
+        alertTextField.text = self.itemArray[indexPath.row].title
+        textField = alertTextField
+      }
+
+      let saveAction = UIAlertAction(title: "Save", style: .default) { action in
+
+        let newItem = self.itemArray[indexPath.row]
+        newItem.title = textField.text!
+        newItem.isChecked = false
+
+        self.saveItems()
+        self.tableView.reloadData()
+      }
+
+      let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+      alert.addAction(cancelAction)
+      alert.addAction(saveAction)
+
+
+      self.present(alert, animated: true,completion: nil)
     }
+
+    let swipeActions = UISwipeActionsConfiguration(actions: [edit])
+
+    return swipeActions
   }
-
 
   //MARK: -Custom CRUD functions
 

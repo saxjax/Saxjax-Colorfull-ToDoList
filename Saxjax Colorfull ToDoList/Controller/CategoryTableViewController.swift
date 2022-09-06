@@ -122,13 +122,18 @@ class CategoryTableViewController: UITableViewController {
 
   //MARK: -Enable Swipes
 
-  override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { _ , indexPath in
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, boolvalue in
       self.delete(at: indexPath)
     }
 
-    let edit = UITableViewRowAction(style: .default, title: "Edit") { _ , indexPath in
+    let swipeActions = UISwipeActionsConfiguration(actions: [delete])
 
+    return swipeActions
+  }
+
+  override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let edit = UIContextualAction(style: .normal, title: "Edit") { _, view, boolValue in
       var textField = UITextField()
 
       let alert = UIAlertController(title: "Edit category", message: "", preferredStyle: .alert)
@@ -154,11 +159,9 @@ class CategoryTableViewController: UITableViewController {
 
 
       self.present(alert, animated: true,completion: nil)
-
     }
-    edit.backgroundColor = UIColor.darkGray
 
-    let changeColor = UITableViewRowAction(style: .default, title: "New color") { _, indexPath in
+    let changeColor = UIContextualAction(style: .normal, title: "New color") { _, view, boolValue in
       let newCategory = self.categories[indexPath.row]
       newCategory.color = MakeColor.randomHex()
 
@@ -167,20 +170,11 @@ class CategoryTableViewController: UITableViewController {
     }
     changeColor.backgroundColor = UIColor.systemGreen
 
-    return [delete,changeColor,edit]
-  }
 
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    switch editingStyle {
-      case .delete:
-        delete(at: indexPath)
-      case .insert:
-        print("Insert pressed")
-      default:
-        print("neither insert or delete is pressed")
-    }
-  }
+    let swipeActions = UISwipeActionsConfiguration(actions: [edit, changeColor])
 
+    return swipeActions
+  }
 
 
   /*
@@ -259,38 +253,6 @@ class CategoryTableViewController: UITableViewController {
 
   //MARK: -Custom popups
 
-  private func editAction(at indexPath:IndexPath,with newValue:String)->[UIAlertAction]{
-    let action = UIAlertAction(title: "Save", style: .default) { action in
-
-      let newCategory = self.categories[indexPath.row]
-      newCategory.name = newValue
-      newCategory.isChecked = false
-
-      self.saveItems()
-      self.tableView.reloadData()
-    }
-    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-
-    return [cancel,action]
-  }
-
-  //  private func createPopUp(named title:String, placeholder:String? = nil, message:String? = nil,  textField:inout UITextField, with actions:[UIAlertAction])->UIAlertController{
-  //
-  //    let alert = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
-  //    alert.addTextField{ alertTextField in
-  //      alertTextField.placeholder = placeholder
-  //      alertTextField.text = message
-  //      textField = alertTextField
-  //    }
-  //    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-  //    alert.addAction(cancel)
-  //    for action in actions {
-  //      alert.addAction(action)
-  //    }
-  //
-  ////    self.present(alert, animated: true,completion: nil)
-  //return alert
-  //  }
 
 
   //MARK: -Coloring
